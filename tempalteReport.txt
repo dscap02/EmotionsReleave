@@ -1,0 +1,61 @@
+# Report di Analisi delle Emozioni
+
+## 1. Introduzione
+In questo report, vengono analizzate le emozioni rilevate all'interno della conversazione fornita. L'obiettivo è identificare le emozioni predominanti, la loro distribuzione e fornire una panoramica dettagliata delle tendenze emotive.
+
+## 2. Panoramica della Conversazione
+**Dati generali:**
+- Numero totale di messaggi analizzati: [Inserire valore]
+- Emozione più frequente: [Inserire emozione]
+- Emozione meno frequente: [Inserire emozione]
+- Percentuale di messaggi neutri: [Inserire valore %]
+
+## 3. Distribuzione delle Emozioni
+La distribuzione delle emozioni nei messaggi analizzati è rappresentata di seguito:
+
+**Tabella delle Frequenze:**
+| Emozione      | Conteggio |
+|---------------|----------|
+| Ammirazione   | [valore]  |
+| Divertimento  | [valore]  |
+| Rabbia        | [valore]  |
+| Tristezza     | [valore]  |
+| Neutra        | [valore]  |
+
+**Grafico a Barre:**
+
+[Inserire grafico della distribuzione delle emozioni]
+
+## 4. Analisi delle Emozioni Dominanti
+Le emozioni predominanti rilevate nella conversazione sono:
+- [Inserire emozione 1]: [Inserire percentuale %]
+- [Inserire emozione 2]: [Inserire percentuale %]
+- [Inserire emozione 3]: [Inserire percentuale %]
+
+Queste emozioni indicano che il tono generale della conversazione è [positivo/negativo/neutro].
+
+## 5. Tendenze Temporali
+L'analisi delle emozioni nel tempo mostra le seguenti variazioni:
+
+[Inserire grafico a linee per l'andamento temporale delle emozioni]
+
+## 6. Messaggi Predominanti
+Di seguito sono riportati alcuni esempi di messaggi rappresentativi delle emozioni predominanti:
+
+**Messaggi con "Rabbia":**
+1. [Inserire messaggio]
+2. [Inserire messaggio]
+
+**Messaggi con "Gioia":**
+1. [Inserire messaggio]
+2. [Inserire messaggio]
+
+## 7. Conclusioni e Raccomandazioni
+Sulla base dell'analisi effettuata, si possono trarre le seguenti conclusioni:
+- [Sintesi dei risultati principali]
+- [Azioni consigliate per migliorare il tono della conversazione]
+
+## 8. Allegati
+- Grafici dettagliati delle emozioni
+- Dati grezzi della conversazione analizzata
+
