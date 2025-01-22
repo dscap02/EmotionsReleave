@@ -1,8 +1,8 @@
 import os
 import sqlite3
-from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
-import streamlit as st  # Correzione dell'importazione
+
+from werkzeug.security import generate_password_hash, check_password_hash
 
 # Percorso al file del database
 DB_PATH = "db/app_database.db"
