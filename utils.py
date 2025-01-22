@@ -1,10 +1,10 @@
 # utils.py
-from turtle import st
+
 
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch.nn.functional as F
-from datetime import datetime
+from datetime import timedelta
 
 # Caricamento del modello pre-addestrato GoEmotions
 MODEL_NAME = "bhadresh-savani/bert-base-uncased-emotion"
@@ -38,41 +38,109 @@ def classify_emotion(text):
 
 
 # Funzione per caricare una chat da un file di testo
-def load_chat_from_file(uploaded_file):
-    chat = []
+from datetime import datetime
+
+
+
+
+def load_chat_from_file(uploaded_file, include_date=False):
+    """
+    Carica una conversazione da un file di testo e verifica la sequenzialità temporale.
+    Ogni messaggio deve rispettare l'ordine cronologico rispetto al precedente.
+
+    Args:
+        uploaded_file (UploadedFile): Il file caricato dall'utente.
+        include_date (bool): Indica se i messaggi includono date e orari.
+
+    Returns:
+        tuple: Una lista di messaggi e la data associata (se presente).
+    """
+    messages = []
+    last_message_time = None  # Teniamo traccia dell'ultimo timestamp per la verifica
+
     try:
-        # Leggi il contenuto del file
-        content = uploaded_file.getvalue().decode("utf-8")
+        # Legge il contenuto del file
+        content = uploaded_file.read().decode("utf-8").strip()
+        lines = content.split("\n")
 
-        # Dividi il contenuto in righe
-        lines = content.splitlines()
-
-        # Analizza ogni riga per separare interlocutore e messaggio
         for line in lines:
-            # Ignora righe vuote
-            if line.strip():
-                # Assumiamo che il formato sia "Interlocutore X: Messaggio"
-                if ": " in line:
-                    interlocutor, text = line.split(": ", 1)
-                    chat.append({"interlocutor": interlocutor.strip(), "text": text.strip()})
+            # Parsing di ogni riga del file
+            if include_date:
+                try:
+                    # Supponiamo che il formato sia "YYYY-MM-DD HH:MM:SS - Interlocutore: Messaggio"
+                    date_part, rest = line.split(" - ", 1)
+                    interlocutor, text = rest.split(": ", 1)
 
-        if not chat:
-            st.error("Nessun messaggio rilevato nel file.")
-        return chat
+                    # Converte la stringa della data in un oggetto datetime
+                    message_time = datetime.strptime(date_part, "%Y-%m-%d %H:%M:%S")
 
+                    # Verifica della sequenzialità temporale
+                    if last_message_time and message_time < last_message_time:
+                        raise ValueError(
+                            f"Errore di sequenzialità temporale: il messaggio '{line}' è fuori ordine."
+                        )
+
+                    last_message_time = message_time  # Aggiorna l'ultimo timestamp
+
+                    # Aggiunge il messaggio
+                    messages.append({
+                        "date": date_part,
+                        "interlocutor": interlocutor,
+                        "text": text
+                    })
+                except ValueError as e:
+                    raise ValueError(f"Errore durante il parsing della riga '{line}': {e}")
+            else:
+                # Formato senza date: "Interlocutore: Messaggio"
+                interlocutor, text = line.split(": ", 1)
+
+                # Assegna una data incrementale fittizia (utile per mantenere l'ordine)
+                current_time = datetime.now()
+                if last_message_time:
+                    current_time = last_message_time + timedelta(seconds=1)  # Aggiunge un secondo
+                last_message_time = current_time
+
+                messages.append({
+                    "date": current_time.strftime("%Y-%m-%d %H:%M:%S"),
+                    "interlocutor": interlocutor,
+                    "text": text
+                })
+
+        # Determina la data generale della conversazione (prima data trovata)
+        chat_date = messages[0]["date"] if messages else None
+        return messages, chat_date
     except Exception as e:
-        st.error(f"Errore nel caricare il file: {e}")
-        return []
+        raise ValueError(f"Errore durante il caricamento del file: {e}")
 
 
 # Funzione per generare un report della conversazione
 def generate_report(conversation):
-    report = f"Report Generato il {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
+    """
+    Genera un report basato sulla conversazione fornita.
+    :param conversation: Lista di messaggi, ciascuno con "interlocutor", "text", e opzionalmente "date".
+    :return: Una stringa con il report.
+    """
+    try:
+        # Inizializza il report come stringa
+        report = "Report della Conversazione\n\n"
 
-    # Aggiungi per ogni messaggio dell'interlocutore l'emozione e la confidenza
-    for speaker, message in conversation:
-        emotion, confidence = classify_emotion(message)
-        report += f"**{speaker}:** {message}\n"
-        report += f"  Emozione: {emotion} (Confidenza: {confidence:.2f})\n\n"
+        for message in conversation:
+            # Estrai i dettagli dal dizionario
+            date = message.get("date", "Data non specificata")
+            speaker = message.get("interlocutor", "Interlocutore sconosciuto")
+            text = message.get("text", "Messaggio vuoto")
 
-    return report
+            # Aggiungi i dettagli al report
+            report += f"Data: {date}\n"
+            report += f"{speaker}: {text}\n\n"
+
+        # Restituisci il report completo
+        return report.strip()
+
+    except Exception as e:
+        print(f"Errore durante la generazione del report: {e}")
+        return None
+
+
+def create_downloadable_file(content):
+    return content.encode("utf-8")
