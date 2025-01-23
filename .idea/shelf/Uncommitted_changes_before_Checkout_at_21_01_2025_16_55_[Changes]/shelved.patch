@@ -1,0 +1,77 @@
+Index: AnalisiEmozioni.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pandas as pd\r\n\r\ndef filter_rows_with_emotions(dataset, x, y):\r\n    \"\"\"\r\n    Filtra le righe di un dataset in cui la colonna delle emozioni contiene entrambe le emozioni x e y.\r\n\r\n    :param dataset: DataFrame contenente il dataset\r\n    :param x: Indice della prima emozione\r\n    :param y: Indice della seconda emozione\r\n    :return: DataFrame filtrato\r\n    \"\"\"\r\n    def contains_emotions(emotions):\r\n        # Converte la stringa delle emozioni in una lista di interi\r\n        emotion_list = list(map(int, emotions.split(',')))\r\n        # Controlla se entrambe le emozioni x e y sono presenti\r\n        return x in emotion_list and y in emotion_list\r\n\r\n    # Applica il filtro al dataset\r\n    return dataset[dataset[1].apply(contains_emotions)]\r\n\r\n# Assegna l'indice dell'emozione x\r\nemotion_x = 10\r\n\r\n# Leggi il dataset\r\ndataset = pd.read_csv(\"train.tsv\", sep='\\t', header=None)\r\n\r\n# Scrivere l'output in un file di testo\r\n# Scrivere l'output in un file di testo\r\nwith open(\"output.txt\", \"w\", encoding=\"utf-8\") as file:\r\n    for emotion_y in range(27):\r\n        if emotion_x != emotion_y:\r\n            # Filtra le righe che contengono le emozioni specificate\r\n            df_with_emotions = filter_rows_with_emotions(dataset, emotion_x, emotion_y)\r\n            if not df_with_emotions.empty:  # Controlla se il DataFrame non è vuoto\r\n                file.write(f\"Istanze con le emozioni {emotion_x} e {emotion_y}:\\n\")\r\n                file.write(df_with_emotions.to_string(index=False))\r\n                file.write(\"\\n\\n\")\r\n\r\n\r\n# Stampa un messaggio per confermare che il file è stato creato\r\nprint(f\"Tutte le istanze con l'emozione {emotion_x} e ogni altra emozione da 0 a 26 sono state scritte nel file 'output.txt'\")\r\n
+===================================================================
+diff --git a/AnalisiEmozioni.py b/AnalisiEmozioni.py
+--- a/AnalisiEmozioni.py	(revision e1baa12873480621615ccbc7286d898180a86fe4)
++++ b/AnalisiEmozioni.py	(date 1737303439156)
+@@ -1,4 +1,8 @@
+ import pandas as pd
++import numpy as np
++import matplotlib.pyplot as plt
++import seaborn as sns
++import os
+ 
+ def filter_rows_with_emotions(dataset, x, y):
+     """
+@@ -19,23 +23,53 @@
+     return dataset[dataset[1].apply(contains_emotions)]
+ 
+ # Assegna l'indice dell'emozione x
+-emotion_x = 10
++emotion_x = 26
++
++# Specifica la directory di output
++output_dir = "results"
++os.makedirs(output_dir, exist_ok=True)
+ 
+ # Leggi il dataset
+ dataset = pd.read_csv("train.tsv", sep='\t', header=None)
+ 
++# Variabili per raccogliere i dati
++correlations = []
++
+ # Scrivere l'output in un file di testo
+-# Scrivere l'output in un file di testo
+-with open("output.txt", "w", encoding="utf-8") as file:
++output_file_path = os.path.join(output_dir, f"output{emotion_x}.txt")
++with open(output_file_path, "w", encoding="utf-8") as file:
+     for emotion_y in range(27):
+         if emotion_x != emotion_y:
+             # Filtra le righe che contengono le emozioni specificate
+             df_with_emotions = filter_rows_with_emotions(dataset, emotion_x, emotion_y)
+-            if not df_with_emotions.empty:  # Controlla se il DataFrame non è vuoto
++            count = len(df_with_emotions)
++            correlations.append(count)  # Salva il numero di correlazioni
++            if count > 0:  # Scrivi solo se ci sono correlazioni
+                 file.write(f"Istanze con le emozioni {emotion_x} e {emotion_y}:\n")
+                 file.write(df_with_emotions.to_string(index=False))
+                 file.write("\n\n")
+ 
++# Analisi e visualizzazione dei dati
++if correlations:
++    # Creazione istogramma
++    plt.figure(figsize=(10, 6))
++    sns.histplot(correlations, kde=False, bins=10, color='blue')
++    plt.title(f"Istogramma delle correlazioni per l'emozione {emotion_x}")
++    plt.xlabel("Numero di correlazioni")
++    plt.ylabel("Frequenza")
++    histogram_path = os.path.join(output_dir, f"histogram{emotion_x}.png")
++    plt.savefig(histogram_path)
++    plt.show()
+ 
+-# Stampa un messaggio per confermare che il file è stato creato
+-print(f"Tutte le istanze con l'emozione {emotion_x} e ogni altra emozione da 0 a 26 sono state scritte nel file 'output.txt'")
++    # Creazione boxplot
++    plt.figure(figsize=(8, 5))
++    sns.boxplot(x=correlations, color='green')
++    plt.title(f"Boxplot delle correlazioni per l'emozione {emotion_x}")
++    plt.xlabel("Numero di correlazioni")
++    boxplot_path = os.path.join(output_dir, f"boxplot{emotion_x}.png")
++    plt.savefig(boxplot_path)
++    plt.show()
++
++    print(f"Grafici generati: '{histogram_path}' e '{boxplot_path}'.")
++else:
++    print("Nessuna correlazione trovata.")
