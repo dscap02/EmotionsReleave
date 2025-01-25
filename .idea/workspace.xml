@@ -4,23 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5591c971-85a5-4620-9b34-1eb827bf86f0" name="Changes" comment="aggiunto file di testing per il modello" />
+    <list default="true" id="d86500a7-59da-4052-92a0-187a26a329bf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="DanieleBranch" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,40 +29,36 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/dscap02/EmotionsReleave.git&quot;,
-    &quot;accountId&quot;: &quot;fd1d46f3-2d34-4279-b113-c8da3cf629d9&quot;
+    &quot;accountId&quot;: &quot;4db1cf3a-dbc7-408a-9317-e38b6a7123b9&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2r5HIMdtVTnd3JY1OuwzofJZGDW" />
+  <component name="ProjectId" id="2s4jvPyyfwVnNsWExwkUsoQWAkX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python.AnalisiDati.executor": "Run",
-    "Python.AnalisiEmozioni.executor": "Run",
-    "Python.Testing.executor": "Run",
-    "Python.opensensors.executor": "Run",
-    "Python.provaTerminal.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "AntonioBranch",
-    "last_opened_file_path": "C:/Users/user/PycharmProjects/EmotionsReleave/bert_emotion_model",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "last_opened_file_path": "C:/Users/user/PycharmProjects/EmotionsReleave/bert_emotion_model"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\bert_emotion_model" />
-      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\documentation" />
+      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave" />
+      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\img" />
       <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\bert_emotion_model" />
-      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\results" />
+      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -80,128 +71,24 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5591c971-85a5-4620-9b34-1eb827bf86f0" name="Changes" comment="" />
-      <created>1735841935893</created>
+      <changelist id="d86500a7-59da-4052-92a0-187a26a329bf" name="Changes" comment="aggiunto gitignore" />
+      <created>1737721972916</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1735841935893</updated>
+      <updated>1737721972916</updated>
     </task>
-    <task id="LOCAL-00001" summary="rimosso id dalla tabella">
+    <task id="LOCAL-00001" summary="demo completata e aggiunte risorse esterne come immagini e font per generazione report e customizzazione demo">
       <option name="closed" value="true" />
-      <created>1735843581187</created>
+      <created>1737802639913</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1735843581187</updated>
+      <updated>1737802639913</updated>
     </task>
-    <task id="LOCAL-00002" summary="aggiunta directory per la documentazione, messa bozza di business understanding">
-      <option name="closed" value="true" />
-      <created>1735843896640</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1735843896640</updated>
-    </task>
-    <task id="LOCAL-00003" summary="generalizzata la funzione per il filtraggio emozioni">
-      <option name="closed" value="true" />
-      <created>1736175118700</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1736175118700</updated>
-    </task>
-    <task id="LOCAL-00004" summary="prova terminal">
-      <option name="closed" value="true" />
-      <created>1737478869561</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1737478869561</updated>
-    </task>
-    <task id="LOCAL-00005" summary="aggiunti results sull'analisi del dataset">
-      <option name="closed" value="true" />
-      <created>1737479853371</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1737479853371</updated>
-    </task>
-    <task id="LOCAL-00006" summary="creazione demo con persistenza dati, caricamento chat file o manuale, aggiunta pagina di login/registrazione e history reports con possibilità di scaricarlo (in formato pdf)">
-      <option name="closed" value="true" />
-      <created>1737505804525</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1737505804525</updated>
-    </task>
-    <task id="LOCAL-00007" summary="rimosso init_db.py (inglobato in database.py, ottimizzato un import sempre in database.py">
-      <option name="closed" value="true" />
-      <created>1737506031941</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1737506031941</updated>
-    </task>
-    <task id="LOCAL-00008" summary="aggiunta feature per permettere di inserire le chat con le date, aggiunti controlli per garantire che la chat abbia un certo senso e flusso temporale.">
-      <option name="closed" value="true" />
-      <created>1737561421838</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1737561421838</updated>
-    </task>
-    <task id="LOCAL-00009" summary="aggiunto file di testing per il modello">
-      <option name="closed" value="true" />
-      <created>1737667997904</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1737667997904</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="DanieleBranch" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="PietroBranch" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="main" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="AntonioBranch" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/main" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/AntonioBranch" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -212,7 +99,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="AntonioBranch" />
+                        <option value="DanieleBranch" />
                       </list>
                     </value>
                   </entry>
@@ -225,16 +112,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rimosso id dalla tabella" />
-    <MESSAGE value="aggiunta directory per la documentazione, messa bozza di business understanding" />
-    <MESSAGE value="generalizzata la funzione per il filtraggio emozioni" />
-    <MESSAGE value="prova terminal" />
-    <MESSAGE value="aggiunti results sull'analisi del dataset" />
-    <MESSAGE value="creazione demo con persistenza dati, caricamento chat file o manuale, aggiunta pagina di login/registrazione e history reports con possibilità di scaricarlo (in formato pdf)" />
-    <MESSAGE value="rimosso init_db.py (inglobato in database.py, ottimizzato un import sempre in database.py" />
-    <MESSAGE value="aggiunta feature per permettere di inserire le chat con le date, aggiunti controlli per garantire che la chat abbia un certo senso e flusso temporale." />
-    <MESSAGE value="modello completo" />
-    <MESSAGE value="aggiunto file di testing per il modello" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunto file di testing per il modello" />
+    <MESSAGE value="aggiunto gitignore" />
+    <MESSAGE value="demo completata e aggiunte risorse esterne come immagini e font per generazione report e customizzazione demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="demo completata e aggiunte risorse esterne come immagini e font per generazione report e customizzazione demo" />
   </component>
 </project>
