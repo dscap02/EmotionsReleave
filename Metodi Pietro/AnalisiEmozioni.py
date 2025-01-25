@@ -1,6 +1,6 @@
 import pandas as pd
 
-from DataUnderstanding import target_emotion, df_filtered
+from DataPreparation import target_emotion, df_filtered
 
 
 # Funzione per determinare se una riga contiene la coppia di emozioni 0 e 24
