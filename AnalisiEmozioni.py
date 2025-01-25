@@ -25,7 +25,6 @@ emotion_x = 10
 dataset = pd.read_csv("train.tsv", sep='\t', header=None)
 
 # Scrivere l'output in un file di testo
-# Scrivere l'output in un file di testo
 with open("output.txt", "w", encoding="utf-8") as file:
     for emotion_y in range(27):
         if emotion_x != emotion_y:

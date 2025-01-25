@@ -63,12 +63,14 @@ def authenticate_user(username, password):
 
 # Funzione per salvare un report
 def save_report(username, report):
+    # Usa un timestamp compatibile con i nomi dei file
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     # Verifica che la cartella 'reports' esista, altrimenti la crea
     if not os.path.exists("reports"):
         os.makedirs("reports")
 
+    # Connessione al database
     conn = get_db_connection()
     cursor = conn.cursor()
 
@@ -76,7 +78,7 @@ def save_report(username, report):
         # Inserimento del report nel database
         cursor.execute(
             "INSERT INTO reports (username, report, timestamp) VALUES (?, ?, ?)",
-            (username, report, timestamp)
+            (username, report, timestamp)  # report è solo il nome del file, non il percorso
         )
         conn.commit()
     except sqlite3.Error as e:
@@ -101,8 +103,8 @@ def fetch_reports(username):
     finally:
         conn.close()
 
-    # Restituisce i report come lista di dizionari
-    return [{'timestamp': report['timestamp'], 'path': f"reports/{report['timestamp']}.pdf"} for report in reports]
+    # Aggiungi il percorso relativo alla cartella 'reports'
+    return [{'timestamp': report['timestamp'], 'path': f"{report['report']}"} for report in reports]
 
 
 # Funzione per creare la struttura iniziale del database
