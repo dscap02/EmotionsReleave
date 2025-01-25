@@ -5,7 +5,7 @@ def contains_emotions_0_14(emotions):
     # Converte la stringa delle emozioni in una lista di interi
     emotion_list = list(map(int, emotions.split(',')))
     # Controlla se entrambe le emozioni 0 e 24 sono presenti
-    return 0 in emotion_list and 2 in emotion_list
+    return 0 in emotion_list and 5 in emotion_list
 
 # Leggi il dataset
 dataset = pd.read_csv("train.tsv", sep='\t', header=None)
@@ -16,8 +16,7 @@ df_with_0_14 = dataset[dataset[1].apply(contains_emotions_0_14)]
 
 
 # Scrivere l'output in un file di testo
-with open("output.txt", "w") as file:
-    file.write("Istanze con le emozioni 0 e 24:\n")
+with open("output.txt", "w",encoding='utf-8') as file:
     file.write(df_with_0_14.to_string(index=False))
 
 # Stampa un messaggio per confermare che il file è stato creato
