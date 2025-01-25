@@ -1,0 +1,41 @@
+# Report di Analisi delle Emozioni
+
+## Introduzione
+In questo report, vengono analizzate le emozioni rilevate all'interno della conversazione fornita. L'obiettivo è identificare le emozioni predominanti, la loro distribuzione e fornire una panoramica dettagliata delle tendenze emotive.
+
+## 1. Panoramica della Conversazione
+**Dati generali:**
+- Numero totale di messaggi analizzati: [Inserire valore]
+- Emozione più frequente: [Inserire emozione]
+- Emozione meno frequente: [Inserire emozione]
+- Percentuale di messaggi neutri: [Inserire valore %]
+
+## 3. Distribuzione delle Emozioni
+La distribuzione delle emozioni nei messaggi analizzati è rappresentata di seguito:
+
+**Tabella delle Frequenze:**
+| Emozione      | Conteggio |
+|---------------|----------|
+| Ammirazione   | [valore]  |
+| Divertimento  | [valore]  |
+| Rabbia        | [valore]  |
+| Tristezza     | [valore]  |
+| Neutra        | [valore]  |
+
+**Grafico a Barre:**
+
+[Inserire grafico della distribuzione delle emozioni]
+
+## 4. Analisi delle Emozioni Dominanti
+Le emozioni predominanti rilevate nella conversazione sono:
+- [Inserire emozione 1]: [Inserire percentuale %]
+- [Inserire emozione 2]: [Inserire percentuale %]
+- [Inserire emozione 3]: [Inserire percentuale %]
+
+Queste emozioni indicano che il tono generale della conversazione è [positivo/negativo/neutro].
+
+## 5. Tendenze Temporali
+L'analisi delle emozioni nel tempo mostra le seguenti variazioni:
+
+[Inserire grafico a linee per l'andamento temporale delle emozioni]
+

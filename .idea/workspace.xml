@@ -4,6 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="0213d863-5ff6-44f3-ad5f-ada66f95e44a" name="Changes" comment="file config">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$" value="PietroBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,6 +25,17 @@
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;dscap02&quot;
   }
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDONh9Epc6I-qBe&quot;,
+        &quot;number&quot;: 4
+      },
+      &quot;lastSeen&quot;: 1737808867168
+    }
+  ]
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -41,6 +56,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/user/PycharmProjects/EmotionsReleave/bert_emotion_model"
   }
 }]]></component>
@@ -66,7 +82,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d86500a7-59da-4052-92a0-187a26a329bf" name="Changes" comment="aggiunto gitignore" />
+      <changelist id="0213d863-5ff6-44f3-ad5f-ada66f95e44a" name="Changes" comment="file config" />
       <created>1737721972916</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -109,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="aggiunto gitignore" />
     <MESSAGE value="demo completata e aggiunte risorse esterne come immagini e font per generazione report e customizzazione demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="demo completata e aggiunte risorse esterne come immagini e font per generazione report e customizzazione demo" />
+    <MESSAGE value="file config" />
+    <option name="LAST_COMMIT_MESSAGE" value="file config" />
   </component>
 </project>

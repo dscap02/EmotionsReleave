@@ -175,21 +175,3 @@ df_filtered[1] = df_filtered[1].apply(
 df_filtered.to_csv("dataset_filtrato.csv", index=False)
 
 print("File salvato come 'dataset_filtrato.csv'")
-
-
-
-
-
-
-
-
-
-# Conta i valori nulli nella colonna 0
-#null_count_col_0 = dataset.iloc[:, 0].isnull().sum()
-
-# Conta i valori nulli nella colonna 1
-#null_count_col_1 = dataset.iloc[:, 1].isnull().sum()
-
-# Stampa i risultati
-#print(f"Valori nulli nella colonna 0: {null_count_col_0}")
-#print(f"Valori nulli nella colonna 1: {null_count_col_1}")
