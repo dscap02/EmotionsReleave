@@ -1,0 +1,28 @@
+Index: Testing.py
+===================================================================
+diff --git a/Testing.py b/Testing.py
+--- a/Testing.py	(revision a6ff0cf7a317722bd945d3065cb7d587d95f59ab)
++++ b/Testing.py	(date 1737664544263)
+@@ -1,0 +1,21 @@
++from transformers import BertTokenizer, BertForSequenceClassification
++import torch
++
++
++model_path = "bert_emotion_model"
++model = BertForSequenceClassification.from_pretrained(model_path)
++tokenizer = BertTokenizer.from_pretrained(model_path)
++device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
++model.to(device)
++
++
++def predici_emozione(testo):
++    inputs = tokenizer(testo, return_tensors="pt", truncation=True, padding=True, max_length=128).to(device)
++    outputs = model(**inputs)
++    prediction = torch.argmax(outputs.logits, dim=1).item()
++    emotion_dict = {0: 'Ammirazione', 2: 'Rabbia', 6: 'Confusione', 10: 'Disapprovazione',
++                    11: 'Disgusto', 14: 'Paura', 17: 'Gioia', 25: 'Tristezza', 27: 'Neutra'}
++    return emotion_dict[prediction]
++
++messaggio_test = "I'm thrilled to coming to your house"
++print("Emozione rilevata:", predici_emozione(messaggio_test))
+\ No newline at end of file
