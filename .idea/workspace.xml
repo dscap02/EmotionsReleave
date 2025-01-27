@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0213d863-5ff6-44f3-ad5f-ada66f95e44a" name="Changes" comment="file config">
+    <list default="true" id="0213d863-5ff6-44f3-ad5f-ada66f95e44a" name="Changes" comment="refactoring nomi file, aggiunta cartella per i reports e struttura project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,14 +52,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/user/PycharmProjects/EmotionsReleave/bert_emotion_model"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/PycharmProjects/EmotionsReleave/bert_emotion_model&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\bert_emotion_model" />
@@ -96,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737802639913</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactoring nomi file, aggiunta cartella per i reports e struttura project">
+      <option name="closed" value="true" />
+      <created>1737838226075</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737838226075</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +134,7 @@
     <MESSAGE value="aggiunto gitignore" />
     <MESSAGE value="demo completata e aggiunte risorse esterne come immagini e font per generazione report e customizzazione demo" />
     <MESSAGE value="file config" />
-    <option name="LAST_COMMIT_MESSAGE" value="file config" />
+    <MESSAGE value="refactoring nomi file, aggiunta cartella per i reports e struttura project" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring nomi file, aggiunta cartella per i reports e struttura project" />
   </component>
 </project>
