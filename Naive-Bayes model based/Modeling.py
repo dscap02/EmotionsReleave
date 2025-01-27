@@ -76,14 +76,18 @@ def calcola_prob_emozione(emozione):
     return emozione_counts.get(emozione, 0) / totale_messaggi
 
 def calcola_prob_parola_emozione(parola, emozione):
+    #recupero di tutte le parole delle istanze legate a una determinata emozione
     parole = parole_per_emozione[emozione]
     totale_parole = len(parole)
+    #calcolo della frequenza della parola in base alle parole delle istanze di quell'emozione
     frequenza_parola = parole.count(parola)
+    #viene usata la tecnica del Laplace smoothing,che implica l'aggiunta del valore 1 di base,per evitare l'invalidazione del calcolo della probabilità
     return (frequenza_parola + 1) / (totale_parole + len(frequenza_totale_parole))
 
 def calcola_prob_parola(parola):
-    """P(parola): frequenza della parola nel dataset"""
+    #Otteniamo la frequenza di tutte le parole nell'intero dataset
     totale_parole_dataset = sum(frequenza_totale_parole.values())
+    #Otteniamo la frequenza della parola specifica in relazione al dataset
     frequenza_parola = frequenza_totale_parole.get(parola, 0)
     return frequenza_parola / totale_parole_dataset
 
@@ -100,12 +104,15 @@ def calcola_prob_emozione_messaggio(messaggio, emozione):
     prob_parola_indipendente = 1
     for parola in parole:
         prob_parola_indipendente *= calcola_prob_parola(parola)
+    #Per evitare di invalidare il calcolo della probabilità,si attribuisce un valore piccolo
+        if(prob_parola_indipendente==0):
+            prob_parola_indipendente = 1e-9
 
-    # Probabilità a priori dell'emozione
+            # Probabilità a priori dell'emozione
     prob_emozione = calcola_prob_emozione(emozione)
 
     # Calcoliamo la probabilità finale con il Teorema di Bayes, considerando la parola indipendente
-    prob_emozione_messaggio = prob_emozione * prob_parola_emozione * prob_parola_indipendente
+    prob_emozione_messaggio = prob_emozione * prob_parola_emozione/prob_parola_indipendente
 
     return prob_emozione_messaggio
 
