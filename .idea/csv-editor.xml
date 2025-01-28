@@ -3,21 +3,14 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\dataset_filtrato.csv">
+        <entry key="\analysis\emotion_analysis.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\dataset_filtrato_pulito.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\dataset_finale_bilanciato.csv">
+        <entry key="\dataset\dataset_finale_bilanciato.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

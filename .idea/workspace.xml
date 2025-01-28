@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0213d863-5ff6-44f3-ad5f-ada66f95e44a" name="Changes" comment="aggiunto doc di Data Preparation nella folder documentation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/EmotionsReleave_report_1BusinessUnderstanding.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/EmotionsReleave_report_1BusinessUnderstanding.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/EmotionsReleave_report_2DataUnderstanding.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/EmotionsReleave_report_2DataUnderstanding.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/EmotionsReleave_report_3DataPreparation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/EmotionsReleave_report_3DataPreparation.pdf" afterDir="false" />
+    <list default="true" id="0213d863-5ff6-44f3-ad5f-ada66f95e44a" name="Changes" comment="refactoring directory &amp; organizzazione project">
+      <change beforePath="$PROJECT_DIR$/db/app_database.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/app_database.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,26 +52,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/PycharmProjects/EmotionsReleave/documentation&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/user/PycharmProjects/EmotionsReleave/analysis"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\analysis" />
+      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\dataset" />
       <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\documentation" />
       <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\bert_emotion_model" />
       <recent name="C:\Users\user\PycharmProjects\EmotionsReleave" />
-      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\dataset" />
+      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\reports" />
+      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\analysis" />
+      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\results" />
       <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\documentation" />
-      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\img" />
-      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave\bert_emotion_model" />
-      <recent name="C:\Users\user\PycharmProjects\EmotionsReleave" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -133,7 +132,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738053135078</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ritocchi e correzioni alla documentazione">
+      <option name="closed" value="true" />
+      <created>1738060147933</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738060147933</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactoring directory &amp; organizzazione project">
+      <option name="closed" value="true" />
+      <created>1738060573395</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738060573395</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,6 +182,8 @@
     <MESSAGE value="aggiunta doc" />
     <MESSAGE value="cambiata formattazione docs" />
     <MESSAGE value="aggiunto doc di Data Preparation nella folder documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunto doc di Data Preparation nella folder documentation" />
+    <MESSAGE value="ritocchi e correzioni alla documentazione" />
+    <MESSAGE value="refactoring directory &amp; organizzazione project" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring directory &amp; organizzazione project" />
   </component>
 </project>
