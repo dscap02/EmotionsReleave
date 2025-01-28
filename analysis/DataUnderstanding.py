@@ -24,7 +24,7 @@ def should_remove(emotions):
     return 27 in emotion_list and len(emotion_list) > 1
 
 # Leggi il dataset
-dataset = pd.read_csv("train.tsv", sep='\t', header=None)
+dataset = pd.read_csv("../train.tsv", sep='\t', header=None)
 
 # Applica il filtro per rimuovere le righe che soddisfano la condizione originale
 df_filtered = dataset[~dataset[1].apply(should_remove)]

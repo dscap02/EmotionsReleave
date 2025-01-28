@@ -2,7 +2,7 @@ from transformers import BertTokenizer, BertForSequenceClassification
 import torch
 
 
-model_path = "bert_emotion_model"
+model_path = "../bert_emotion_model"
 model = BertForSequenceClassification.from_pretrained(model_path)
 tokenizer = BertTokenizer.from_pretrained(model_path)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

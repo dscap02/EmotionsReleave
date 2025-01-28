@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Caricare il dataset pulito
-file_path = 'dataset_filtrato_pulito.csv'  # Sostituisci con il percorso corretto
+file_path = '../dataset_filtrato_pulito.csv'  # Sostituisci con il percorso corretto
 df = pd.read_csv(file_path)
 
 # Assumendo che la colonna delle emozioni sia la seconda colonna (indice 1)

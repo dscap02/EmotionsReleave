@@ -35,7 +35,7 @@ df_with=df_filtered[df_filtered[1].apply(contains_emotions)]
 
 
 # Scrivere l'output in un file di testo
-with open("../output.txt", "w", encoding="utf-8") as file:
+with open("../analysis/output.txt", "w", encoding="utf-8") as file:
     file.write("Istanze con l'emozione 1:\n")
     file.write(df_with.to_string(index=False))
 
