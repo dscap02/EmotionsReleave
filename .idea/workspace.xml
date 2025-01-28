@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0213d863-5ff6-44f3-ad5f-ada66f95e44a" name="Changes" comment="cambiata formattazione docs">
+    <list default="true" id="0213d863-5ff6-44f3-ad5f-ada66f95e44a" name="Changes" comment="aggiunto doc di Data Preparation nella folder documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/EmotionsReleave_report_1BusinessUnderstanding.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/EmotionsReleave_report_1BusinessUnderstanding.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/EmotionsReleave_report_2DataUnderstanding.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/EmotionsReleave_report_2DataUnderstanding.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/EmotionsReleave_report_3DataPreparation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/EmotionsReleave_report_3DataPreparation.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738006756509</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="aggiunto doc di Data Preparation nella folder documentation">
+      <option name="closed" value="true" />
+      <created>1738053135078</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738053135078</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +166,7 @@
     <MESSAGE value="refactoring nomi file, aggiunta cartella per i reports e struttura project" />
     <MESSAGE value="aggiunta doc" />
     <MESSAGE value="cambiata formattazione docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambiata formattazione docs" />
+    <MESSAGE value="aggiunto doc di Data Preparation nella folder documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto doc di Data Preparation nella folder documentation" />
   </component>
 </project>
